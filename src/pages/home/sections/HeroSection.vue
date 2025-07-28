@@ -1,5 +1,5 @@
 <template>
-  <div class="outer-div">
+  <div class="hero-section">
     <img :src="hero" alt="a table image" />
     <div class="box-container">
       <div class="supporting-text">new arrival</div>
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-.outer-div {
+.hero-section {
   height: 90vh;
   overflow: hidden;
   position: relative;

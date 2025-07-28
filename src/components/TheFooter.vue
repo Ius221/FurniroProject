@@ -38,6 +38,9 @@
       <button>subscribe</button>
     </div>
   </div>
+  <div class="copyright">
+    <p>&copy; 2024 furino. All rights reserved</p>
+  </div>
 </template>
 
 <script>
@@ -105,5 +108,18 @@ a:visited {
 a:hover,
 a:active {
   text-decoration: underline;
+}
+</style>
+
+<style>
+.copyright {
+  max-width: 124rem;
+  margin: 0 auto;
+  margin-top: 4.8rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 3.5rem 0;
+  font-size: 1.6rem;
+  color: #333;
+  text-align: center;
 }
 </style>

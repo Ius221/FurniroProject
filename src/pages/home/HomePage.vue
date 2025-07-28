@@ -1,12 +1,18 @@
 <template>
   <hero-section />
+  <small-gallery class="section" />
 </template>
 
 <script>
 import HeroSection from './sections/HeroSection.vue'
+import SmallGallery from './sections/SmallGallery.vue'
 export default {
-  components: { HeroSection },
+  components: { HeroSection, SmallGallery },
 }
 </script>
 
-<style></style>
+<style scoped>
+.section {
+  margin: 9rem auto;
+}
+</style>
