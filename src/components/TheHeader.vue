@@ -7,10 +7,12 @@
       </div>
       <div class="links">
         <div class="link">
-          <router-link to="#"> Home </router-link>
-          <router-link to="#"> Shop </router-link>
-          <router-link to="#"> About </router-link>
-          <router-link to="#"> Contact </router-link>
+          <router-link to="/" :class="{ active: route.path === '/' }">Home</router-link>
+          <router-link to="/shop/page/1" :class="{ active: isActive('/shop') }">Shop</router-link>
+          <router-link to="/about" :class="{ active: route.path === '/about' }">About</router-link>
+          <router-link to="/contact" :class="{ active: route.path === '/contact' }"
+            >Contact</router-link
+          >
         </div>
       </div>
       <div class="icons">
@@ -37,6 +39,7 @@ import user from '@/assets/svg/user.png'
 import search from '@/assets/svg/search.png'
 import like from '@/assets/svg/like.png'
 import cart from '@/assets/svg/cart.png'
+import { useRoute } from 'vue-router'
 export default {
   data() {
     return {
@@ -45,7 +48,13 @@ export default {
       search,
       like,
       cart,
+      route: useRoute(),
     }
+  },
+  methods: {
+    isActive(base) {
+      return this.route.path === base || this.route.path.startsWith(base + '/')
+    },
   },
 }
 </script>
@@ -70,13 +79,20 @@ nav {
   display: flex;
   gap: 4.5rem;
 }
-a:link,
-a:visited {
+.link :deep(a) {
   color: inherit;
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 500;
   padding: 3.8rem 0;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.link :deep(a:hover),
+.link :deep(a.active) {
+  transform: scale(1.1);
+  text-decoration: underline;
+  color: #b88e2f;
 }
 
 .ind-icon img {
