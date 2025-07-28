@@ -10,10 +10,18 @@
     <div class="list">
       <div class="fade mb">Links</div>
       <div class="links">
-        <div class="link">Home</div>
-        <div class="link">Shop</div>
-        <div class="link">About</div>
-        <div class="link">Contact</div>
+        <div class="link">
+          <router-link to="/">Home</router-link>
+        </div>
+        <div class="link">
+          <router-link to="/shop">Shop</router-link>
+        </div>
+        <div class="link">
+          <router-link to="/about">About</router-link>
+        </div>
+        <div class="link">
+          <router-link to="/contact">Contact</router-link>
+        </div>
       </div>
     </div>
     <div class="list">
@@ -64,9 +72,7 @@ h3 {
   font-size: 1.6rem;
   font-weight: 500;
 }
-</style>
 
-<style>
 button,
 input {
   border: none;
@@ -76,11 +82,28 @@ input {
   color: #9f9f9f;
   width: 20rem;
 }
+input:focus {
+  color: #000;
+  outline: none;
+}
 button {
   width: auto;
+  cursor: pointer;
   background-color: transparent;
   color: #000;
   margin-left: 1rem;
   text-transform: uppercase;
+}
+
+a:link,
+a:visited {
+  color: inherit;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
 }
 </style>
