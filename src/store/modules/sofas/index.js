@@ -191,7 +191,7 @@ export default {
           id: "SF_7844",
           title: "Modu Set",
           price: 78000,
-          tags: "hot",
+          // tags: "hot",
           description: "Modu Set is a versatile six-piece ottoman collection for flexible living spaces. Arrange the ottomans for extra seating, lounging, or coffee table needs—each piece sturdy, comfy, and covered in easy-care fabric.",
           sku: "MOD-2024-7844-OS",
           category: ["ottoman", "modular", "versatile", "seating", "multi-functional"],

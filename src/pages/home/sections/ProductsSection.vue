@@ -9,6 +9,9 @@
         @mouseenter="isHover = index"
         @mouseleave="isHover = null"
       >
+        <div class="tag" :class="isDiscount(sofa.tags) ? 'discount' : ''" v-if="sofa.tags">
+          {{ sofa.tags }}
+        </div>
         <router-link :to="`/shop/${sofa.id}`" :class="isHover === index ? 'hidden-data' : 'hidden'">
           <button class="add-cart">Add to cart</button>
           <div class="other-options">
@@ -32,7 +35,20 @@
         <div class="others">
           <h3>{{ sofa.title }}</h3>
           <p class="desc">{{ sofa.description.split(' ').slice(0, 3).join(' ') }}...</p>
-          <p class="price">₹ {{ sofa.price.toLocaleString('en-IN') }}</p>
+          <div class="price">
+            <div v-if="sofa.tags && isDiscount(sofa.tags)" class="disc-price">
+              <p>
+                ₹
+                {{
+                  (sofa.price - sofa.price * (Number(sofa.tags.slice(1, 3)) / 100)).toLocaleString(
+                    'en-IN',
+                  )
+                }}
+              </p>
+              <p class="actual-price">₹ {{ sofa.price.toLocaleString('en-IN') }}</p>
+            </div>
+            <div v-else>₹ {{ sofa.price.toLocaleString('en-IN') }}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -61,11 +77,9 @@ export default {
     console.log('Sofas loaded:', this.sofas)
   },
   methods: {
-    hoverInd() {
-      console.log('hii ther')
-    },
-    hoverOut() {
-      console.log('Helloww....')
+    isDiscount(value) {
+      if (value.includes('-')) return true
+      return false
     },
   },
 }
@@ -115,6 +129,18 @@ h3 {
 .price {
   font-size: 2rem;
   font-weight: 600;
+}
+.disc-price {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.actual-price {
+  text-decoration: line-through;
+  font-style: italic;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: smaller;
 }
 .product-lists {
   display: grid;
@@ -201,5 +227,26 @@ a {
 .show-more:hover {
   background-color: #b88e2f;
   color: #fff;
+}
+/* adding tags in the product */
+.tag {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 5%;
+  top: 3%;
+  text-transform: capitalize;
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #2ec1ac;
+}
+.discount {
+  background-color: #e97171 !important;
 }
 </style>
