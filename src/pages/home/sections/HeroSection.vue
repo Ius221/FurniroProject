@@ -81,6 +81,13 @@ button {
   background-color: #b88e2f;
   margin-top: 4.6rem;
   font-weight: 800;
+  cursor: pointer;
   letter-spacing: 1.1px;
+  transition: all 0.5s;
+}
+button:hover {
+  /* background-color: ; */
+  box-shadow: 0 0 30px #b88e2f;
+  border-radius: 1rem;
 }
 </style>

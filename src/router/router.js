@@ -12,6 +12,10 @@ const router = createRouter({
     },
 
   ],
+  scrollBehavior(_, __, savedPosition) {
+    if (savedPosition) return { ...savedPosition, behavior: 'smooth' }
+    else return { top: 0, behavior: 'smooth' }
+  },
 })
 
 export default router
