@@ -101,7 +101,6 @@ h2 {
   height: 30rem;
   width: 28.5rem;
   overflow: hidden;
-  background-color: #f00;
 }
 .product-img {
   position: absolute;
