@@ -1,9 +1,9 @@
 <template>
-  <h1>Gallery section</h1>
+  <h2>This is gallery section</h2>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style></style>
+<style scoped></style>
