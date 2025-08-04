@@ -9,52 +9,104 @@
       <div class="img-content">
         <div class="main-img">
           <div class="container">
-            <img :src="first" alt="" />
-            <div class="box">
-              <p class="top">Study Room</p>
-              <h3>Mind Peace</h3>
-            </div>
+            <transition name="slide" mode="out-in">
+              <img :src="currentImage" :key="activeDot" alt="" class="main-image" />
+            </transition>
+            <transition name="slide" mode="out-in">
+              <div class="box" :key="activeDot">
+                <p class="top">{{ currentImageObj.title }}</p>
+                <h3>{{ currentImageObj.desc }}</h3>
+              </div>
+            </transition> 
           </div>
         </div>
-        <div class="second">
+        <div class="img2">
           <div class="supporting">
-            <img :src="second" alt="" />
+            <transition name="slide" mode="out-in">
+              <img :src="supportingImage.img" :key="activeDot + '-support1'" alt="" />
+            </transition>
           </div>
           <div class="dots">
-            <div class="dot active-dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+            <div
+              v-for="(_, index) in images"
+              :key="index"
+              class="dot"
+              :class="{ 'active-dot': activeDot === index + 1 }"
+              @click="switchImage(index + 1)"
+            ></div>
           </div>
         </div>
         <div class="supporting">
-          <img :src="third" alt="" />
+          <transition name="slide" mode="out-in">
+            <img :src="thirdImage.img" :key="activeDot + '-support2'" alt="" />
+          </transition>
         </div>
         <div class="supporting">
-          <img :src="first" alt="" />
+          <transition name="slide" mode="out-in">
+            <img :src="fourthImage.img" :key="activeDot + '-support3'" alt="" />
+          </transition>
         </div>
-        <div class="supporting">
-          <img :src="first" alt="" />
-        </div>
+      </div>
+      <div class="right-arrow" @click="switchNextImage">
+        <img :src="right" alt="" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import first from '@/assets/gallery/img--1.png'
-import second from '@/assets/gallery/img--2.png'
-import third from '@/assets/gallery/img--3.png'
-import fourth from '@/assets/gallery/img--4.png'
+import img1 from '@/assets/gallery/img--1.png'
+import img2 from '@/assets/gallery/img--2.png'
+import img3 from '@/assets/gallery/img--3.png'
+import img4 from '@/assets/gallery/img--4.png'
+import right from '@/assets/svg/right.png'
 export default {
   data() {
-    return { first, second, third, fourth }
+    return {
+      right,
+      activeDot: 1,
+      images: [
+        { img: img1, title: 'Study Room', desc: 'Mind Peace' },
+        { img: img2, title: 'Living Room', desc: 'Luxury Comfort' },
+        { img: img3, title: 'Kitchen', desc: 'Cook Zone' },
+        { img: img4, title: 'Rest Room', desc: ' Well Comfort' },
+      ],
+    }
+  },
+  computed: {
+    supportingImage() {
+      return this.images[this.activeDot % this.images.length]
+    },
+    thirdImage() {
+      return this.images[(this.activeDot + 1) % this.images.length]
+    },
+    currentImageObj() {
+      return this.images[this.activeDot - 1]
+    },
+    currentImage() {
+      return this.currentImageObj.img
+    },
+    fourthImage() {
+      return this.images[(this.activeDot + 2) % this.images.length]
+    },
+  },
+  methods: {
+    switchImage(dotNumber) {
+      this.activeDot = dotNumber
+    },
+    switchNextImage() {
+      if (this.activeDot >= this.images.length) {
+        this.activeDot = 1
+      } else {
+        this.activeDot += 1
+      }
+    },
   },
 }
 </script>
 
 <style scoped>
-/* left content */
+/* General Container Styles */
 .outer-div {
   background-color: #fcf8f3;
   width: 100%;
@@ -68,6 +120,7 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   height: 100%;
+  position: relative;
 }
 .text-content {
   display: flex;
@@ -76,7 +129,6 @@ export default {
   gap: 2rem;
   width: 42rem !important;
 }
-/* 8825238566 */
 h2 {
   color: #3a3a3a;
   font-size: 4rem;
@@ -87,7 +139,6 @@ p {
   color: #616161;
   font-size: 1.6rem;
 }
-
 .btn {
   color: #fff;
   font-size: 1.6rem;
@@ -103,15 +154,15 @@ p {
 a {
   text-decoration: none;
   color: inherit;
-}
-
+} /* Image Content Layout
+*/
 .img-content {
   margin-left: 4.2rem;
   display: flex;
   gap: 2.4rem;
+  position: relative;
 }
 .container {
-  background-color: #f00;
   overflow: hidden;
   height: 58rem;
   width: 40rem;
@@ -121,6 +172,11 @@ a {
   width: 37.2rem;
   height: 48.6rem;
 }
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+} /* Dots and Pagination */
 .dots {
   display: flex;
   gap: 2rem;
@@ -128,49 +184,55 @@ a {
 }
 .dot {
   background-color: #d8d8d8;
-  height: 1.1rem;
   width: 1.1rem;
+  height: 1.1rem;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
+  transition: background 0.25s;
 }
 .dot:hover {
   background-color: rgba(184, 143, 47, 0.6);
 }
 .active-dot {
   background-color: #b88e2f !important;
-}
+} /* Ring animation effect inside the active dot */
 .active-dot::before {
   content: '';
   position: absolute;
-  top: -8px;
-  left: -8px;
-  width: 2.7rem; /* 14+4*2 */
-  height: 2.7rem; /* 14+4*2 */
-  border: 2px solid #b88e2f; /* Ring color */
+  top: -0.8rem;
+  left: -0.8rem;
+  width: 2.7rem;
+  height: 2.7rem;
+  border: 2px solid #b88e2f;
   border-radius: 50%;
   box-sizing: border-box;
   z-index: 1;
-}
-img {
+  background: transparent;
+  pointer-events: none;
+} /* Main Image */
+.main-image {
   width: 100%;
+  display: block;
 }
-</style>
-
-<style scoped>
 .main-img {
   position: relative;
 }
-h3 {
-  font-weight: 600;
-  font-size: 2.8rem;
+/* Vue Transition */
+.slide-enter-active,
+.slide-leave-active {
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s;
 }
-.top {
-  font-size: 1.6rem;
-  color: #616161;
-  text-transform: uppercase;
-  text-decoration: underline;
+.slide-enter-from {
+  transform: translateX(30px);
+  opacity: 0;
 }
+.slide-leave-to {
+  transform: translateX(-30px);
+  opacity: 0;
+} /* Box Overlay on Image */
 .box {
   position: absolute;
   height: 13rem;
@@ -182,5 +244,40 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+h3 {
+  font-weight: 600;
+  font-size: 2.8rem;
+}
+.top {
+  font-size: 1.6rem;
+  color: #616161;
+  text-transform: uppercase;
+  text-decoration: underline;
+} /* Right Arrow */
+.right-arrow {
+  position: absolute;
+  height: 4.8rem;
+  width: 4.8rem;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  transition: background 0.2s;
+}
+.right-arrow:hover {
+  background-color: #eee;
+}
+.right-arrow img {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 3px;
 }
 </style>

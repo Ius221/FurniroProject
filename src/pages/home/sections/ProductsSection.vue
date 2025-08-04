@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-    <router-link to="/shop" class="show-more">Show More</router-link>
+    <router-link to="/shop/page/1" class="show-more">Show More</router-link>
   </div>
 </template>
 

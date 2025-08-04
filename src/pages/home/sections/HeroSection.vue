@@ -10,7 +10,7 @@
       <div class="desc">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores ut eaque debitis?
       </div>
-      <button>buy now</button>
+      <router-link to="/shop/page/1" class="btn">buy now</router-link>
     </div>
   </div>
 </template>
@@ -69,7 +69,11 @@ img {
   font-weight: 500;
   color: #333;
 }
-button {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,11 +85,12 @@ button {
   background-color: #b88e2f;
   margin-top: 4.6rem;
   font-weight: 800;
+  font-size: 1.6rem;
   cursor: pointer;
   letter-spacing: 1.1px;
   transition: all 0.5s;
 }
-button:hover {
+.btn:hover {
   /* background-color: ; */
   box-shadow: 0 0 30px #b88e2f;
   border-radius: 1rem;
