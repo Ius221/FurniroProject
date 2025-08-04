@@ -1,6 +1,6 @@
 <template>
   <div class="outer-all">
-    <div class="img-container">
+    <div class="bread-crumming">
       <img class="bg-img" :src="rect" alt="" />
       <h2>Shop</h2>
       <div class="breadcrum">
@@ -9,24 +9,84 @@
         <router-link class="curr-link" to="#">Shop</router-link>
       </div>
     </div>
+    <div class="show-list">
+      <div class="content">
+        <div class="left">
+          <div class="inner-left">
+            <div class="filter">
+              <img class="logo" :src="setting" alt="" />
+              <p>Filter</p>
+            </div>
+            <img class="logo" :src="fcircle" alt="" />
+            <img
+              class="logo view grid"
+              v-if="isGrid === true"
+              @click="togggleView"
+              :src="grid"
+              alt=""
+            />
+            <img class="logo view list" @click="togggleView" v-else :src="list" alt="" />
+          </div>
+          <div class="showing-data">
+            <p>Showing {{ 1 - 16 }} of {{ 32 }} results</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="show">
+            <p>Show</p>
+            <div class="num">16</div>
+          </div>
+          <div class="show">
+            <p>Short by</p>
+            <div class="drop">
+              <select>
+                <option value="Name">Name</option>
+                <option value="hot">Hot</option>
+                <option value="new">New</option>
+                <option value="discount">Discount</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import rect from '@/assets/images/Rectangle.png'
+import setting from '@/assets/svg/setting.png'
+import fcircle from '@/assets/svg/fcircle.png'
+import grid from '@/assets/svg/grid.png'
+import list from '@/assets/svg/list.png'
 import right from '@/assets/svg/right.png'
 export default {
   data() {
     return {
       rect,
+      setting,
+      list,
+      fcircle,
+      grid,
       right,
+      isGrid: true,
+    }
+  },
+  methods: {
+    togggleView() {
+      this.isGrid = !this.isGrid
+    },
+  },
+  provide() {
+    return {
+      view: this.isGrid,
     }
   },
 }
 </script>
 
 <style scoped>
-.img-container {
+.bread-crumming {
   position: relative;
   height: 31.6rem;
   overflow: hidden;
@@ -68,10 +128,10 @@ a:visited {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px; /* adjust as needed */
+  bottom: -2px;
   width: 0;
-  height: 2px; /* thickness of underline */
-  background-color: currentColor;
+  height: 2px;
+  background-color: #b88e2f;
   transition: width 0.3s ease;
 }
 
@@ -87,5 +147,82 @@ a:visited {
   display: flex;
   align-items: center;
   gap: 1.2rem;
+}
+
+/* nav left side */
+.logo {
+  width: 2rem;
+  height: 2rem;
+}
+.show-list {
+  width: 100%;
+  height: 10rem;
+  background-color: #f9f1e7;
+}
+
+.content {
+  max-width: 123.6rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10rem;
+}
+.left {
+  display: flex;
+  gap: 3rem;
+}
+.view {
+  cursor: pointer;
+}
+.filter {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.inner-left {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  padding-right: 3rem;
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
+  height: 3rem;
+}
+P {
+  font-size: 2rem;
+}
+
+/* nav right side */
+.right {
+  display: flex;
+  gap: 3rem;
+}
+.show {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  font-size: 2rem;
+  color: #9f9f9f;
+  height: 5.5rem;
+  width: 5.5rem;
+}
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  height: 5.5rem;
+  width: 18.8rem;
+  font-size: 2rem;
+  color: #9f9f9f;
+  padding: 1.2rem 3rem;
 }
 </style>

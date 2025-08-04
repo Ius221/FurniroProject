@@ -79,7 +79,7 @@ nav {
   display: flex;
   gap: 4.5rem;
 }
-.link :deep(a) {
+a {
   color: inherit;
   text-decoration: none;
   font-size: 1.6rem;
@@ -87,11 +87,27 @@ nav {
   padding: 3.8rem 0;
   transition: all 0.3s ease;
   display: inline-block;
+  position: relative;
 }
-.link :deep(a:hover),
-.link :deep(a.active) {
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 35px;
+  width: 0%;
+  height: 2px;
+  transition: all 0.3s ease;
+  background-color: #b88e2f;
+}
+a.active::after,
+a:hover::after {
+  width: 100%;
+}
+
+.active,
+a:hover {
   transform: scale(1.1);
-  text-decoration: underline;
   color: #b88e2f;
 }
 
