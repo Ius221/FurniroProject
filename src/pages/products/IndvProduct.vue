@@ -1,9 +1,24 @@
 <template>
-  <h2>Hii there</h2>
+  <product-breadcrum :title="currProd.title" />
+  <product-info />
 </template>
 
 <script>
-export default {}
+import ProductBreadcrum from './sections/ProductBreadcrum.vue'
+import ProductInfo from './sections/ProductInfo.vue'
+export default {
+  components: { ProductInfo, ProductBreadcrum },
+  data() {
+    return {
+      id: null,
+      currProd: null,
+    }
+  },
+  created() {
+    this.id = this.$route.params.prodId
+    this.currProd = this.$store.state.sofa.sofas.find((abc) => abc.id === this.id)
+  },
+}
 </script>
 
-<style></style>
+<style scoped></style>
