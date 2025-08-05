@@ -28,13 +28,13 @@
             <img class="logo view list" @click="togggleView" v-else :src="list" alt="" />
           </div>
           <div class="showing-data">
-            <p>Showing {{ 1 - 16 }} of {{ 32 }} results</p>
+            <p>Showing {{ showData() }} of {{ listArr }} results</p>
           </div>
         </div>
         <div class="right">
           <div class="show">
             <p>Show</p>
-            <div class="num">16</div>
+            <div class="num">{{ perPage }}</div>
           </div>
           <div class="show">
             <p>Short by</p>
@@ -71,11 +71,31 @@ export default {
       grid,
       right,
       isGrid: true,
+      listArr: null,
+      perPage: 12,
     }
+  },
+  created() {
+    this.listArr = this.$store.state.sofa.sofas.length
   },
   methods: {
     togggleView() {
       this.isGrid = !this.isGrid
+    },
+    showData() {
+      const pageNo = Number(this.$route.params.pageNo) || 1
+      // Adjust if your page size is dynamic
+      const total = this.listArr
+
+      // Calculate start and end indexes
+      const start = (pageNo - 1) * this.perPage + 1
+      let end = pageNo * this.perPage
+      if (end > total) end = total
+
+      // If there is no data or start is greater than total, show "0 - 0"
+      if (total === 0 || start > total) return '0 - 0'
+
+      return `${start} - ${end}`
     },
   },
   provide() {
