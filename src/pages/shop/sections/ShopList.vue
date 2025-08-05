@@ -28,7 +28,7 @@
         </div>
       </router-link>
       <div class="img-container">
-        <img class="product-img" :src="img" alt="" />
+        <img class="product-img" :src="getImage(sofa.image[0])" alt="" />
       </div>
       <div class="others">
         <h3>{{ sofa.title }}</h3>
@@ -115,6 +115,12 @@ export default {
     checkPage() {
       return this.currPage
     },
+    getImage(image) {
+      let abc = this.img.slice(0, -10)
+      abc = abc + image + '.jpg'
+      console.log(abc, image)
+      return abc
+    },
   },
   computed: {
     totalPage() {
@@ -139,9 +145,9 @@ export default {
 .product-img {
   position: absolute;
   /* width: 100%; */
-  width: 150%;
-  left: -25%;
-  top: -35%;
+  width: 190%;
+  left: -5%;
+  top: 0%;
 }
 .others {
   text-align: start;

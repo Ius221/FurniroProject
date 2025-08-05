@@ -30,7 +30,7 @@
           </div>
         </router-link>
         <div class="img-container">
-          <img class="product-img" :src="img" alt="" />
+          <img class="product-img" :src="prodImage(sofa.image[0])" alt="" />
         </div>
         <div class="others">
           <h3>{{ sofa.title }}</h3>
@@ -81,6 +81,12 @@ export default {
       if (value.includes('-')) return true
       return false
     },
+    prodImage(image) {
+      let currImg = img.slice(0, -10)
+      currImg = currImg + image + '.jpg'
+      return currImg
+      // console.log(currImg, image)
+    },
   },
 }
 </script>
@@ -105,9 +111,9 @@ h2 {
 .product-img {
   position: absolute;
   /* width: 100%; */
-  width: 150%;
-  left: -25%;
-  top: -35%;
+  width: 180%;
+  left: -5%;
+  top: -5%;
 }
 .others {
   text-align: start;
