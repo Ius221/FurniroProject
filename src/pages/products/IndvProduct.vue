@@ -1,6 +1,6 @@
 <template>
   <product-breadcrum :title="currProd.title" />
-  <product-info />
+  <product-info :product="currProd" />
 </template>
 
 <script>
