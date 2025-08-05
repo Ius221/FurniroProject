@@ -55,11 +55,11 @@
 
 <script>
 import rect from '@/assets/images/Rectangle.png'
-import setting from '@/assets/svg/setting.png'
-import fcircle from '@/assets/svg/fcircle.png'
-import grid from '@/assets/svg/grid.png'
-import list from '@/assets/svg/list.png'
-import right from '@/assets/svg/right.png'
+import setting from '@/assets/svg/Home/setting.png'
+import fcircle from '@/assets/svg/shop/fcircle.png'
+import grid from '@/assets/svg/shop/grid.png'
+import list from '@/assets/svg/shop/list.png'
+import right from '@/assets/svg/Home/right.png'
 import { ref, toRef } from 'vue'
 export default {
   data() {

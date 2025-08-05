@@ -45,10 +45,6 @@
   </div>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style scoped>
 .outer-all {
   border-top: 1px solid rgba(0, 0, 0, 0.1);

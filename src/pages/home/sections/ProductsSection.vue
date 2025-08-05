@@ -57,9 +57,9 @@
 </template>
 
 <script>
-import share from '@/assets/svg/share.png'
-import compare from '@/assets/svg/compare.png'
-import like from '@/assets/svg/like.png'
+import share from '@/assets/svg/Home/share.png'
+import compare from '@/assets/svg/Home/compare.png'
+import like from '@/assets/svg/header/like.png'
 import img from '@/assets/images/products/img--1.png'
 export default {
   data() {

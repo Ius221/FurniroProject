@@ -32,13 +32,13 @@
     </nav>
   </div>
 </template>
-
+src\assets\svg\header\like.png
 <script>
-import logo from '@/assets/svg/logo.svg'
-import user from '@/assets/svg/user.png'
-import search from '@/assets/svg/search.png'
-import like from '@/assets/svg/like.png'
-import cart from '@/assets/svg/cart.png'
+import logo from '@/assets/svg/header/logo.svg'
+import user from '@/assets/svg/header/user.png'
+import search from '@/assets/svg/header/search.png'
+import like from '@/assets/svg/header/like.png'
+import cart from '@/assets/svg/header/cart.png'
 import { useRoute } from 'vue-router'
 export default {
   data() {

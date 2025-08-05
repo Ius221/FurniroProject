@@ -17,7 +17,7 @@
                 <p class="top">{{ currentImageObj.title }}</p>
                 <h3>{{ currentImageObj.desc }}</h3>
               </div>
-            </transition> 
+            </transition>
           </div>
         </div>
         <div class="img2">
@@ -59,7 +59,7 @@ import img1 from '@/assets/gallery/img--1.png'
 import img2 from '@/assets/gallery/img--2.png'
 import img3 from '@/assets/gallery/img--3.png'
 import img4 from '@/assets/gallery/img--4.png'
-import right from '@/assets/svg/right.png'
+import right from '@/assets/svg/Home/right.png'
 export default {
   data() {
     return {
