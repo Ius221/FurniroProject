@@ -455,10 +455,921 @@ export default {
             "Well-packaged, arrived in perfect shape.",
             "Worth the investment for relaxation in our living room."
           ]
+        },
+        {
+          id: "SF_7850",
+          title: "Crafty Stool",
+          price: 45000,
+          tags: "-10%",
+          description: "Crafty Stool is a compact, handcrafted wooden stool with natural finish. Perfect for casual seating, footrest, or decor accent in modern and rustic interiors.",
+          sku: "CRA-2025-7850-ST",
+          category: ["stool", "wooden", "casual", "home"],
+          image: ["img--11a", "img--11b", "img--11c", "img--11d"],
+          liked: true,
+          "large-description": [
+            "The Crafty Stool features solid oak construction with a smooth, natural finish that highlights the grain. Its minimalist design fits in cozy corners or accompanies dining tables as extra seating.",
+            "Lightweight yet sturdy, the wooden stool supports up to 100 kg and can be moved easily around the house. Its compact dimensions allow it to fit small spaces without sacrificing style or function.",
+            "This versatile piece adds warmth and a handcrafted touch to interiors ranging from rustic farmhouse to modern minimalism. It also doubles as a footrest or a side table for books or plants."
+          ],
+          general: {
+            "sales package": "1 Wooden Stool",
+            "model number": "CRA-ST-7850",
+            "secondary material": "Solid Oak",
+            "configuration": "Single Seater",
+            "material": "Natural Wood",
+            "color": "Natural Oak"
+          },
+          product: {
+            "filling material": "Not Applicable",
+            "finish type": "Natural Matte Wood",
+            "adjustable headrest": "No",
+            "max load capacity": "100 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "32 cm",
+            "height": "45 cm",
+            "depth": "32 cm",
+            "weight": "4 kg",
+            "seat height": "45 cm",
+            "leg height": "45 cm"
+          },
+          reviews: [
+            "Simple, durable, and beautiful. Exactly what I wanted.",
+            "Fits perfectly in my kitchen corner. Very sturdy for daily use.",
+            "The wood grain is lovely and finish is smooth and natural.",
+            "Compact but comfortable for short seating or resting feet.",
+            "Great value for a handcrafted wood stool."
+          ]
+        },
+        {
+          id: "SF_7851",
+          title: "Celeste Bench",
+          price: 88000,
+          description: "Celeste Bench is an elegantly designed wooden bench with cushioned seating. Ideal for dining halls, hallways, or entryway, it balances aesthetics with comfort.",
+          sku: "CEL-2025-7851-BE",
+          category: ["bench", "wood", "cushioned", "multi-purpose"],
+          image: ["img--12a", "img--12b", "img--12c", "img--12d"],
+          liked: false,
+          "large-description": [
+            "Designed with elegance and utility in mind, the Celeste Bench features a solid teak frame polished to a warm sheen, supporting a wide, padded seat upholstered in high-quality fabric.",
+            "Its clean lines and slight curve on the backrest offer lumbar support, making it comfortable for longer seating periods. It is perfect for dining use, foyer seating, or as a decorative accent piece.",
+            "Easy to match with various decor themes, Celeste complements modern and classic interiors alike. The cushioned top is plush yet firm, providing comfort while maintaining form."
+          ],
+          general: {
+            "sales package": "1 Wooden Bench with Cushion",
+            "model number": "CEL-BEN-7851",
+            "secondary material": "Teak Wood",
+            "configuration": "Bench with Backrest",
+            "material": "Fabric Upholstery",
+            "color": "Honey Brown"
+          },
+          product: {
+            "filling material": "High-Density Foam",
+            "finish type": "Polished Wood & Fabric",
+            "adjustable headrest": "No",
+            "max load capacity": "250 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "140 cm",
+            "height": "85 cm",
+            "depth": "40 cm",
+            "weight": "18 kg",
+            "seat height": "45 cm",
+            "leg height": "40 cm"
+          },
+          reviews: [
+            "Beautiful bench with great cushioning. Very sturdy.",
+            "Perfect as an entryway seat; looks very refined.",
+            "Comfortable and well-crafted. Delivery was on time.",
+            "Bench is very durable and the wood finish is excellent.",
+            "Cushions are supportive and fabric is soft to the touch."
+          ]
+        },
+        {
+          id: "SF_7852",
+          title: "Lyra Recliner",
+          price: 135000,
+          tags: "hot",
+          description: "Lyra Recliner features ergonomic design, adjustable footrest, and soft leather upholstery. Ideal for relaxing after a long day with smooth reclining control and excellent lumbar support.",
+          sku: "LYR-2025-7852-RC",
+          category: ["chair", "recliner", "leather", "living-room"],
+          image: ["img--13a", "img--13b", "img--13c", "img--13d"],
+          liked: true,
+          "large-description": [
+            "The Lyra Recliner combines luxury and functionality with supple leather upholstery and precision mechanics. An adjustable footrest and smooth tilt mechanism allow for multiple comfortable positions.",
+            "Its high-density foam padding supports posture and enhances relaxation. The reclining action operates quietly and effortlessly, making it perfect for living room or home theater use.",
+            "Lyra's elegant design, reinforced steel frame, and padded armrests make it a premium addition to your relaxation space offering durability and style."
+          ],
+          general: {
+            "sales package": "1 Recliner Chair, Assembly Kit",
+            "model number": "LYR-REC-7852",
+            "secondary material": "Steel Frame",
+            "configuration": "Single Seater Recliner",
+            "material": "Leather",
+            "color": "Cognac Brown"
+          },
+          product: {
+            "filling material": "High-Density Foam",
+            "finish type": "Leather",
+            "adjustable headrest": "Yes",
+            "max load capacity": "140 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "90 cm",
+            "height": "105 cm",
+            "depth": "98 cm",
+            "weight": "45 kg",
+            "seat height": "48 cm",
+            "leg height": "15 cm"
+          },
+          reviews: [
+            "Super comfortable and sturdy recliner with great leather.",
+            "Smooth action, perfect for relaxing and reading.",
+            "Looks great in my living room and very easy to assemble.",
+            "Highly recommended for anyone wanting a quality recliner.",
+            "Materials and build quality justify the price."
+          ]
+        },
+        {
+          id: "SF_7853",
+          title: "Orion Chair",
+          price: 69000,
+          description: "Orion Chair is a sleek, compact office chair with breathable mesh back, cushioned seat, and adjustable height. Supports posture and comfort during long work hours.",
+          sku: "ORI-2025-7853-OC",
+          category: ["chair", "office", "compact", "mesh"],
+          image: ["img--14a", "img--14b", "img--14c", "img--14d"],
+          liked: false,
+          "large-description": [
+            "The Orion Chair improves workspace comfort with a lightweight, modern design. The ventilated mesh back enhances airflow, preventing heat build-up during extended use.",
+            "Its adjustable pneumatic height and tilt function make it adaptable to various desks and tasks, while padded seat cushions provide lasting comfort without bulk.",
+            "Orion fits into home offices and professional setups alike, balancing ergonomic needs with a small footprint."
+          ],
+          general: {
+            "sales package": "1 Office Chair, Assembly Instructions",
+            "model number": "ORI-MSH-7853",
+            "secondary material": "Mesh Fabric & Plastic",
+            "configuration": "Single Seater",
+            "material": "Mesh & Foam",
+            "color": "Black"
+          },
+          product: {
+            "filling material": "High-Density Foam",
+            "finish type": "Mesh Fabric",
+            "adjustable headrest": "No",
+            "max load capacity": "120 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "62 cm",
+            "height": "115 cm",
+            "depth": "62 cm",
+            "weight": "16 kg",
+            "seat height": "42-52 cm",
+            "leg height": "Adjustable"
+          },
+          reviews: [
+            "Good value office chair with decent comfort.",
+            "Lightweight and easy to move around workspace.",
+            "The mesh is breathable and keeps me cool while working.",
+            "Adjustments are smooth and effective for my height.",
+            "Perfect for small spaces."
+          ]
+        },
+        {
+          id: "SF_7854",
+          title: "Zephyr Sofa",
+          price: 158000,
+          tags: "new",
+          description: "Zephyr Sofa is a luxurious three-seat sofa with plush cushions, high-quality fabric, and stylish tufted back. Perfect for modern and traditional interiors seeking comfort and elegance.",
+          sku: "ZEP-2025-7854-SF",
+          category: ["sofa", "luxury", "living-room", "tufted"],
+          image: ["img--15a", "img--15b", "img--15c", "img--15d"],
+          liked: true,
+          "large-description": [
+            "The Zephyr Sofa combines classic tufted styling with contemporary comfort. Its dense foam cushions and soft textured upholstery offer a sumptuous seating experience for family and guests.",
+            "A sturdy hardwood frame and solid craftsmanship ensure durability. The sofa’s neutral color and timeless design suit a variety of interior aesthetics, from modern chic to elegant traditional.",
+            "Zephyr is designed for those who appreciate craftsmanship, comfort, and subtle sophistication in their living spaces."
+          ],
+          general: {
+            "sales package": "1 Three-Seater Sofa, 3 Cushions",
+            "model number": "ZEP-THR-7854",
+            "secondary material": "Hardwood Frame",
+            "configuration": "Three Seater",
+            "material": "Premium Fabric",
+            "color": "Light Grey"
+          },
+          product: {
+            "filling material": "High Resilience Foam",
+            "finish type": "Tufted Fabric",
+            "adjustable headrest": "No",
+            "max load capacity": "280 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "210 cm",
+            "height": "90 cm",
+            "depth": "95 cm",
+            "weight": "72 kg",
+            "seat height": "45 cm",
+            "leg height": "12 cm"
+          },
+          reviews: [
+            "Beautiful and comfortable sofa with perfect cushioning.",
+            "Excellent fabric quality and looks great in my living room.",
+            "Sturdy and well-made, feels like a luxury piece.",
+            "Easy to maintain and clean, highly recommended.",
+            "The tufting detail adds a fantastic touch of style."
+          ]
+        },
+        {
+          id: "SF_7855",
+          title: "Orchid Chair",
+          price: 73000,
+          tags: "hot",
+          description: "Orchid Chair boasts elegant curves with plush velvet upholstery and solid walnut legs. Ideal for living rooms or bedrooms, it combines style and comfort effortlessly.",
+          sku: "ORC-2025-7855-CH",
+          category: ["chair", "velvet", "living-room", "modern"],
+          image: ["img--16a", "img--16b", "img--16c", "img--16d"],
+          liked: true,
+          "large-description": [
+            "The Orchid Chair captivates with its classic silhouette accented by sumptuous velvet fabric and warm wooden legs. Designed for comfort and aesthetic appeal, this chair elevates any interior setting.",
+            "Robust walnut legs ensure long-lasting support and stability. The velvet upholstery is soft to the touch and comes in a rich wine color, adding a burst of luxury to your living space.",
+            "Perfect for cozy corners, reading nooks, or as an accent piece, Orchid Chair enriches your home decor while providing a comfortable seat."
+          ],
+          general: {
+            "sales package": "1 Armchair, Care Guide",
+            "model number": "ORC-LUX-7855",
+            "secondary material": "Solid Walnut",
+            "configuration": "Single Seater",
+            "material": "Velvet Upholstery",
+            "color": "Wine Red"
+          },
+          product: {
+            "filling material": "High-Density Foam",
+            "finish type": "Soft Velvet",
+            "adjustable headrest": "No",
+            "max load capacity": "125 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "80 cm",
+            "height": "90 cm",
+            "depth": "75 cm",
+            "weight": "25 kg",
+            "seat height": "47 cm",
+            "leg height": "18 cm"
+          },
+          reviews: [
+            "Soft velvet and sturdy legs, very comfortable chair!",
+            "The wine color adds a perfect pop to my living room.",
+            "Beautiful design, high quality craftsmanship.",
+            "Easy to assemble and looks great.",
+            "Ideal for relaxing with a good book."
+          ]
+        },
+        {
+          id: "SF_7856",
+          title: "Pinnacle Sofa",
+          price: 198000,
+          tags: "-15%",
+          description: "Pinnacle Sofa is a sleek and spacious modern three-seater crafted with premium leather upholstery and durable hardwood frame. A refined centerpiece for luxury living rooms.",
+          sku: "PIN-2025-7856-SF",
+          category: ["sofa", "leather", "luxury", "living-room"],
+          image: ["img--17a", "img--17b", "img--17c", "img--17d"],
+          liked: false,
+          "large-description": [
+            "The Pinnacle Sofa combines contemporary design with enduring comfort through plush leather seating and a tailored finish. Its generous dimensions make it an excellent choice for large living spaces.",
+            "Crafted with a hardwood frame and premium cushioning, Pinnacle withstands daily use while maintaining its luxurious appearance. Its neutral beige tone blends seamlessly with multiple décor styles.",
+            "Perfect for entertaining guests or unwinding with family, this sofa offers both style and functionality, with easy maintenance and elegant charm."
+          ],
+          general: {
+            "sales package": "1 Three-Seater Sofa, 3 Cushions",
+            "model number": "PIN-LTH-7856",
+            "secondary material": "Hardwood Frame",
+            "configuration": "Three Seater",
+            "material": "Genuine Leather",
+            "color": "Beige"
+          },
+          product: {
+            "filling material": "High Resilience Foam",
+            "finish type": "Leather",
+            "adjustable headrest": "No",
+            "max load capacity": "280 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "215 cm",
+            "height": "85 cm",
+            "depth": "90 cm",
+            "weight": "78 kg",
+            "seat height": "46 cm",
+            "leg height": "12 cm"
+          },
+          reviews: [
+            "Luxurious leather, very comfortable and durable.",
+            "Perfect size for our family room.",
+            "High quality and looks very elegant.",
+            "Cushions retain shape well over time.",
+            "Assembly was smooth and quick."
+          ]
+        },
+        {
+          id: "SF_7857",
+          title: "Vivid Ottoman",
+          price: 49000,
+          description: "Vivid Ottoman is a soft, square ottoman covered in bright fabric with sturdy wooden legs. It doubles as extra seating or a stylish footrest.",
+          sku: "VIV-2025-7857-OT",
+          category: ["ottoman", "fabric", "seating", "footrest"],
+          image: ["img--18a", "img--18b", "img--18c", "img--18d"],
+          liked: true,
+          "large-description": [
+            "The Vivid Ottoman combines vibrant color choice with practical design, offering both comfort and function. Upholstered in high-quality fabric, it adds a cheerful accent to living or bedroom spaces.",
+            "Its solid wooden legs provide stability, while the plush cushion supports relaxed seating or comfortable leg elevation.",
+            "Lightweight and versatile, Vivid is perfect for compact spaces or as a flexible seating option that adds personality and comfort."
+          ],
+          general: {
+            "sales package": "1 Ottoman",
+            "model number": "VIV-OTT-7857",
+            "secondary material": "Solid Wood",
+            "configuration": "Single Piece",
+            "material": "Fabric Upholstery",
+            "color": "Bright Red"
+          },
+          product: {
+            "filling material": "Polyurethane Foam",
+            "finish type": "Fabric",
+            "adjustable headrest": "No",
+            "max load capacity": "100 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "50 cm",
+            "height": "40 cm",
+            "depth": "50 cm",
+            "weight": "7 kg",
+            "seat height": "40 cm",
+            "leg height": "15 cm"
+          },
+          reviews: [
+            "Bright color instantly lifts the room.",
+            "Good quality wood and cushioning.",
+            "Perfect size for footrest or extra seat.",
+            "Fabric is soft and easy to clean.",
+            "A great addition to my living room."
+          ]
+        },
+        {
+          id: "SF_7858",
+          title: "Aura Chair",
+          price: 65000,
+          description: "Aura Chair features a modern minimalist design with padded seat and back in breathable fabric. Slim metal legs add stability while maintaining a sleek look.",
+          sku: "AUR-2025-7858-CH",
+          category: ["chair", "minimalist", "modern", "dining"],
+          image: ["img--19a", "img--19b", "img--19c", "img--19d"],
+          liked: false,
+          "large-description": [
+            "Offering understated elegance, the Aura Chair suits contemporary dining areas or home offices. Its padded seat and backrest provide comfort without bulk.",
+            "The metal frame is coated for durability and resistance to scuffs. Light and sturdy, Aura can be moved easily and cleaned without hassle.",
+            "Its neutral tone and clean lines allow it to blend seamlessly with various decor themes, enhancing your interior with minimal effort."
+          ],
+          general: {
+            "sales package": "1 Chair",
+            "model number": "AUR-MIN-7858",
+            "secondary material": "Metal Frame",
+            "configuration": "Single Seater",
+            "material": "Fabric Upholstery",
+            "color": "Light Grey"
+          },
+          product: {
+            "filling material": "Foam",
+            "finish type": "Fabric",
+            "adjustable headrest": "No",
+            "max load capacity": "120 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "55 cm",
+            "height": "80 cm",
+            "depth": "55 cm",
+            "weight": "9 kg",
+            "seat height": "45 cm",
+            "leg height": "35 cm"
+          },
+          reviews: [
+            "Simple and elegant design.",
+            "Very comfortable for dining and office work.",
+            "Sturdy and easy to clean fabric.",
+            "Arrived quickly, assembly was easy.",
+            "Fits well with all my furniture."
+          ]
+        },
+        {
+          id: "SF_7859",
+          title: "Delta Sofa",
+          price: 178000,
+          tags: "new",
+          description: "Delta Sofa blends plush cushions with firm support and premium fabric upholstery. Spacious three-seater perfect for living rooms that combine comfort with modern style.",
+          sku: "DEL-2025-7859-SF",
+          category: ["sofa", "modern", "living-room", "comfort"],
+          image: ["img--20a", "img--20b", "img--20c", "img--20d"],
+          liked: true,
+          "large-description": [
+            "The Delta Sofa offers comfort through layers of high-resilience foam and soft polyester fabric in a modern, sleek finishing touch. Its spacious seating invites relaxation.",
+            "Crafted on a sturdy hardwood frame, Delta ensures long-term durability while maintaining design integrity. Its neutral beige color pairs well with many interior styles.",
+            "Ideal for daily family use or relaxing evenings, it balances aesthetic appeal with functional comfort, suitable for a variety of living spaces."
+          ],
+          general: {
+            "sales package": "1 Three-Seater Sofa, 3 Cushions",
+            "model number": "DEL-THR-7859",
+            "secondary material": "Hardwood Frame",
+            "configuration": "Three Seater",
+            "material": "Polyester Fabric",
+            "color": "Beige"
+          },
+          product: {
+            "filling material": "High Resilience Foam",
+            "finish type": "Polyester Fabric",
+            "adjustable headrest": "No",
+            "max load capacity": "280 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "210 cm",
+            "height": "85 cm",
+            "depth": "90 cm",
+            "weight": "70 kg",
+            "seat height": "45 cm",
+            "leg height": "12 cm"
+          },
+          reviews: [
+            "Comfortable and stylish sofa.",
+            "Fabric feels durable and soft.",
+            "Good support for everyday seating.",
+            "Arrived well packaged and on time.",
+            "Highly recommend for modern homes."
+          ]
+        },
+        {
+          id: "SF_7860",
+          title: "Bliss Chair",
+          price: 67000,
+          tags: "new",
+          description: "Bliss Chair combines sleek metal legs with soft velvet upholstery to offer modern elegance and comfort, perfect for living rooms or dressing areas.",
+          sku: "BLI-2025-7860-CH",
+          category: ["chair", "velvet", "modern", "living-room"],
+          image: ["img--21a", "img--21b", "img--21c", "img--21d"],
+          liked: true,
+          "large-description": [
+            "The Bliss Chair uplifts your space with its plush velvet fabric and polished metal legs. Ideal for modern interiors, it offers both style and comfort in one compact package.",
+            "Its ergonomic design supports natural sitting posture while providing softness that invites relaxation during conversations or reading.",
+            "Durable and lightweight, it suits diverse uses including occasional seating or occasional desk chair."
+          ],
+          general: {
+            "sales package": "1 Velvet Chair, Take Care Guide",
+            "model number": "BLI-VEL-7860",
+            "secondary material": "Metal Legs",
+            "configuration": "Single Seater",
+            "material": "Velvet Upholstery",
+            "color": "Dusty Pink"
+          },
+          product: {
+            "filling material": "High Density Foam",
+            "finish type": "Soft Velvet",
+            "adjustable headrest": "No",
+            "max load capacity": "125 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "78 cm",
+            "height": "88 cm",
+            "depth": "75 cm",
+            "weight": "22 kg",
+            "seat height": "46 cm",
+            "leg height": "18 cm"
+          },
+          reviews: [
+            "Excellent chair for a pop of color!",
+            "Soft and comfy, perfect for my lounge area.",
+            "Lightweight and stylish.",
+            "Very good quality velvet upholstery.",
+            "Assembly was straightforward."
+          ]
+        },
+        {
+          id: "SF_7861",
+          title: "Terra Sofa",
+          price: 160000,
+          tags: "-20%",
+          description: "Terra Sofa is a sophisticated three-seater featuring linen fabric upholstery with cushioned seats on a hardwood frame. Perfect for modern and classic living rooms.",
+          sku: "TER-2025-7861-SF",
+          category: ["sofa", "linen", "modern", "classic"],
+          image: ["img--22a", "img--22b", "img--22c", "img--22d"],
+          liked: false,
+          "large-description": [
+            "The Terra Sofa balances comfort and style with soft linen upholstery and plush cushioning. It fits perfectly in both contemporary and traditional settings.",
+            "Durably built with solid hardwood, it supports lasting use without compromising aesthetics or comfort.",
+            "Its neutral hues blend easily with various décors, making it a versatile centerpiece for your living room."
+          ],
+          general: {
+            "sales package": "1 Three-Seater Sofa, 3 Cushions",
+            "model number": "TER-LIN-7861",
+            "secondary material": "Hardwood Frame",
+            "configuration": "Three Seater",
+            "material": "Linen Fabric",
+            "color": "Soft Taupe"
+          },
+          product: {
+            "filling material": "High Resilience Foam",
+            "finish type": "Linen Fabric",
+            "adjustable headrest": "No",
+            "max load capacity": "280 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "215 cm",
+            "height": "90 cm",
+            "depth": "92 cm",
+            "weight": "75 kg",
+            "seat height": "45 cm",
+            "leg height": "12 cm"
+          },
+          reviews: [
+            "Soft fabric with very comfortable seating.",
+            "Looks great in living room, a classic staple.",
+            "Sturdy and well-made sofa.",
+            "Perfect for both modern and traditional spaces.",
+            "Easy maintenance and durable fabric."
+          ]
+        },
+        {
+          id: "SF_7862",
+          title: "Nexa Chair",
+          price: 70000,
+          description: "Nexa Chair offers ergonomic back support with breathable mesh and a padded seat for long sitting comfort. Ideal for office or home study.",
+          sku: "NEX-2025-7862-OC",
+          category: ["chair", "office", "ergonomic", "mesh"],
+          image: ["img--23a", "img--23b", "img--23c", "img--23d"],
+          liked: true,
+          "large-description": [
+            "Nexa Chair features breathable mesh to keep users cool and comfortable, an important feature during long working hours.",
+            "Adjustable height and tilt functions provide customization for optimal ergonomic support, improving posture and reducing fatigue.",
+            "Its sleek design makes it a great addition to any modern office or home workspace."
+          ],
+          general: {
+            "sales package": "1 Office Chair, Assembly Manual",
+            "model number": "NEX-MSH-7862",
+            "secondary material": "Mesh & Plastic",
+            "configuration": "Single Seater",
+            "material": "Mesh Fabric",
+            "color": "Black"
+          },
+          product: {
+            "filling material": "High Density Foam",
+            "finish type": "Mesh",
+            "adjustable headrest": "No",
+            "max load capacity": "130 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "64 cm",
+            "height": "118 cm",
+            "depth": "63 cm",
+            "weight": "18 kg",
+            "seat height": "44-54 cm",
+            "leg height": "Adjustable"
+          },
+          reviews: [
+            "Very comfortable for desk work.",
+            "Breathable mesh keeps me cool.",
+            "Easy to adjust and assemble.",
+            "Fits well in home office.",
+            "Good build quality for price."
+          ]
+        },
+        {
+          id: "SF_7863",
+          title: "Opus Sofa",
+          price: 122000,
+          tags: "hot",
+          description: "Opus Sofa combines classic tufted design with modern comfort, upholstered in durable fabric with deep cushions suitable for all day lounging.",
+          sku: "OPU-2025-7863-SF",
+          category: ["sofa", "tufted", "classic", "living-room"],
+          image: ["img--24a", "img--24b", "img--24c", "img--24d"],
+          liked: false,
+          "large-description": [
+            "Opus Sofa merges traditional elegance with contemporary comfort featuring tufted backs and plush foam cushions for excellent support.",
+            "Its durable fabric is designed to withstand daily wear while providing a soft seating experience.",
+            "Suitable for formal living rooms or cozy family spaces, Opus includes quality craftsmanship and timeless style."
+          ],
+          general: {
+            "sales package": "1 Three-Seater Sofa, 2 Cushions",
+            "model number": "OPU-TUF-7863",
+            "secondary material": "Hardwood Frame",
+            "configuration": "Three Seater",
+            "material": "Fabric Upholstery",
+            "color": "Muted Blue"
+          },
+          product: {
+            "filling material": "High Resilience Foam",
+            "finish type": "Textured Fabric",
+            "adjustable headrest": "No",
+            "max load capacity": "270 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "208 cm",
+            "height": "92 cm",
+            "depth": "89 cm",
+            "weight": "70 kg",
+            "seat height": "44 cm",
+            "leg height": "12 cm"
+          },
+          reviews: [
+            "The tufting adds a classy touch.",
+            "Very comfortable cushions for long sitting.",
+            "Fabric is durable and easy to maintain.",
+            "Fits well with both modern and traditional rooms.",
+            "Sturdy and quality sofa overall."
+          ]
+        },
+        {
+          id: "SF_7864",
+          title: "Frost Chair",
+          price: 68000,
+          tags: "-15%",
+          description: "Frost Chair is a minimalist metal frame chair with comfy, padded fabric seat and a gentle curve backrest, perfect for stylish dining areas or office spaces.",
+          sku: "FRO-2025-7864-CH",
+          category: ["chair", "minimalist", "dining", "metal"],
+          image: ["img--25a", "img--25b", "img--25c", "img--25d"],
+          liked: true,
+          "large-description": [
+            "The Frost Chair blends modern metal architecture and cushioned fabric seating for a sleek yet comfortable experience.",
+            "Its ergonomic backrest supports users through prolonged sitting, and the compact profile fits well into smaller rooms or dining sets.",
+            "Coated metal legs resist scuffs while upholstery fabric offers a soft texture that complements diverse interiors."
+          ],
+          general: {
+            "sales package": "1 Dining Chair",
+            "model number": "FRO-DIN-7864",
+            "secondary material": "Metal Frame",
+            "configuration": "Single Seater",
+            "material": "Fabric Upholstery",
+            "color": "Light Grey"
+          },
+          product: {
+            "filling material": "High Density Foam",
+            "finish type": "Fabric Upholstery",
+            "adjustable headrest": "No",
+            "max load capacity": "120 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "57 cm",
+            "height": "82 cm",
+            "depth": "55 cm",
+            "weight": "10 kg",
+            "seat height": "46 cm",
+            "leg height": "36 cm"
+          },
+          reviews: [
+            "Stylish and solid chair.",
+            "Very suitable for dining and office.",
+            "Simple assembly and great quality.",
+            "Cushions are supportive and comfortable.",
+            "Metal frame is sturdy and well-made."
+          ]
+        },
+        {
+          id: "SF_7865",
+          title: "Mira Sofa",
+          price: 132000,
+          tags: "new",
+          description: "Mira Sofa is a plush two-seater with soft velvet upholstery and elegant wooden legs. Its compact design fits perfectly in cozy living spaces or bedrooms.",
+          sku: "MIR-2025-7865-SF",
+          category: ["sofa", "velvet", "two-seater", "living-room"],
+          image: ["img--26a", "img--26b", "img--26c", "img--26d"],
+          liked: true,
+          "large-description": [
+            "The Mira Sofa combines luxury and space-saving design, making it ideal for apartments or intimate seating areas. Velvet upholstery offers softness and style.",
+            "Its solid wood legs provide durability and a classic finish. The firm but comfortable cushions support posture and long sitting periods.",
+            "Mira looks elegant alongside modern decor and is easy to maintain with its stain-resistant fabric."
+          ],
+          general: {
+            "sales package": "1 Sofa, 2 Cushions",
+            "model number": "MIR-TWO-7865",
+            "secondary material": "Solid Wood",
+            "configuration": "Two Seater",
+            "material": "Velvet",
+            "color": "Soft Pink"
+          },
+          product: {
+            "filling material": "High Resilience Foam",
+            "finish type": "Velvet Upholstery",
+            "adjustable headrest": "No",
+            "max load capacity": "180 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "150 cm",
+            "height": "85 cm",
+            "depth": "90 cm",
+            "weight": "40 kg",
+            "seat height": "43 cm",
+            "leg height": "15 cm"
+          },
+          reviews: [
+            "Lovely velvet fabric, very comfortable.",
+            "Perfect size for my bedroom nook.",
+            "Sturdy build and stylish design.",
+            "Easy to clean and maintain.",
+            "Great customer service and delivery."
+          ]
+        },
+        {
+          id: "SF_7866",
+          title: "Pulse Chair",
+          price: 62000,
+          description: "Pulse Chair features a contemporary metal frame with padded fabric seating and ergonomic backrest, ideal for dining or office setups.",
+          sku: "PUL-2025-7866-CH",
+          category: ["chair", "metal", "office", "dining"],
+          image: ["img--27a", "img--27b", "img--27c", "img--27d"],
+          liked: false,
+          "large-description": [
+            "Modern design meets functionality in the Pulse Chair, constructed with a durable metal frame and cushioned seat for lasting comfort.",
+            "Its ergonomic backrest supports posture during extended use, making it a versatile choice for dining rooms or workspaces.",
+            "The sleek silhouette complements various decor styles, while the padded fabric upholstery adds softness and visual appeal."
+          ],
+          general: {
+            "sales package": "1 Chair",
+            "model number": "PUL-MET-7866",
+            "secondary material": "Metal Frame",
+            "configuration": "Single Seater",
+            "material": "Fabric Upholstery",
+            "color": "Charcoal"
+          },
+          product: {
+            "filling material": "Foam Padding",
+            "finish type": "Fabric",
+            "adjustable headrest": "No",
+            "max load capacity": "120 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "54 cm",
+            "height": "80 cm",
+            "depth": "56 cm",
+            "weight": "11 kg",
+            "seat height": "45 cm",
+            "leg height": "35 cm"
+          },
+          reviews: [
+            "Good chair for the price.",
+            "Comfortable for dining and work.",
+            "Metal frame feels durable.",
+            "Fabric is soft and breathable.",
+            "Simple but stylish design."
+          ]
+        },
+        {
+          id: "SF_7867",
+          title: "Cielo Ottoman",
+          price: 53000,
+          tags: "-10%",
+          description: "Cielo Ottoman is a cozy square ottoman with soft tufted fabric and wooden legs, perfect for extra seating or as a footrest in living rooms.",
+          sku: "CIE-2025-7867-OT",
+          category: ["ottoman", "tufted", "seating", "living-room"],
+          image: ["img--28a", "img--28b", "img--28c", "img--28d"],
+          liked: true,
+          "large-description": [
+            "The Cielo Ottoman offers soft support with high-density foam cushioned inside tufted fabric upholstery. Its compact design fits perfectly alongside sofas or chairs.",
+            "The sturdy wooden legs provide reliable support, while the tufted detailing adds a classic and elegant look suitable for various decor styles.",
+            "It serves as an ideal footrest or extra guest seating, enhancing comfort and functionality in your living space."
+          ],
+          general: {
+            "sales package": "1 Ottoman",
+            "model number": "CIE-OTT-7867",
+            "secondary material": "Solid Wood",
+            "configuration": "Single Piece",
+            "material": "Fabric Upholstery",
+            "color": "Cream"
+          },
+          product: {
+            "filling material": "High-Density Foam",
+            "finish type": "Textured Fabric",
+            "adjustable headrest": "No",
+            "max load capacity": "100 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "55 cm",
+            "height": "42 cm",
+            "depth": "55 cm",
+            "weight": "8 kg",
+            "seat height": "42 cm",
+            "leg height": "14 cm"
+          },
+          reviews: [
+            "Comfortable ottoman that enhances my living room.",
+            "Elegant tufted design, matches well with sofa.",
+            "Sturdy legs and soft cushion, perfect footrest.",
+            "Easy to move around and feels durable.",
+            "Great purchase, quality fabric and build."
+          ]
+        },
+        {
+          id: "SF_7868",
+          title: "Luna Sofa",
+          price: 172000,
+          description: "Luna Sofa is a plush, spacious three-seater with soft microfiber upholstery and classic button tufting on the backrest. Its sturdy frame ensures longtime reliability.",
+          sku: "LUN-2025-7868-SF",
+          category: ["sofa", "microfiber", "tufted", "living-room"],
+          image: ["img--29a", "img--29b", "img--29c", "img--29d"],
+          liked: false,
+          "large-description": [
+            "Luna Sofa features elegant button tufting combined with dense cushioning for firm yet comfortable seating.",
+            "Microfiber fabric offers stain resistance and soft texture, making this sofa suitable for families and pet owners.",
+            "Built with durable hardwood framing, Luna promises years of wear resistance and support, while its neutral tone complements various decor styles."
+          ],
+          general: {
+            "sales package": "1 Sofa, 3 Cushions",
+            "model number": "LUN-MIC-7868",
+            "secondary material": "Hardwood Frame",
+            "configuration": "Three Seater",
+            "material": "Microfiber Upholstery",
+            "color": "Light Beige"
+          },
+          product: {
+            "filling material": "High Resilience Foam",
+            "finish type": "Microfiber Fabric",
+            "adjustable headrest": "No",
+            "max load capacity": "275 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "210 cm",
+            "height": "88 cm",
+            "depth": "93 cm",
+            "weight": "73 kg",
+            "seat height": "44 cm",
+            "leg height": "13 cm"
+          },
+          reviews: [
+            "Soft and durable microfiber fabric.",
+            "Classic tufting with comfortable cushions.",
+            "Strong frame and quality build.",
+            "Easy to clean and maintain.",
+            "Great sofa for families."
+          ]
+        },
+        {
+          id: "SF_7869",
+          title: "Axis Chair",
+          price: 69000,
+          tags: "hot",
+          description: "Axis Chair is a streamlined office chair with ergonomic mesh back, adjustable armrests, and memory foam seat for all-day comfort and support.",
+          sku: "AXI-2025-7869-OC",
+          category: ["chair", "office", "ergonomic", "mesh"],
+          image: ["img--30a", "img--30b", "img--30c", "img--30d"],
+          liked: true,
+          "large-description": [
+            "The Axis Chair offers ergonomic support with its breathable mesh back and padded memory foam seat, adaptable for long work or gaming sessions.",
+            "Fully adjustable armrests, height, and tilt allow customized comfort, encouraging better posture and reducing fatigue.",
+            "The sleek black design fits professional workspaces or home offices, balancing function with style."
+          ],
+          general: {
+            "sales package": "1 Office Chair, Assembly Guide",
+            "model number": "AXI-ERG-7869",
+            "secondary material": "Mesh Fabric & Plastic",
+            "configuration": "Single Seater",
+            "material": "Mesh & Foam",
+            "color": "Black"
+          },
+          product: {
+            "filling material": "Memory Foam",
+            "finish type": "Mesh Upholstery",
+            "adjustable headrest": "Yes",
+            "max load capacity": "140 kg",
+            "origin": "Made in India"
+          },
+          dimension: {
+            "width": "67 cm",
+            "height": "120 cm",
+            "depth": "65 cm",
+            "weight": "21 kg",
+            "seat height": "45-55 cm",
+            "leg height": "Adjustable"
+          },
+          reviews: [
+            "Very comfortable and supportive chair.",
+            "Great ergonomic features, easy to customize.",
+            "Breathable back keeps me cool all day.",
+            "Modern design fits well in my office.",
+            "Simple to assemble with clear instructions."
+          ]
         }
       ]
-
-
     }
   },
   mutations,

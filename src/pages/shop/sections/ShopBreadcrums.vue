@@ -60,6 +60,7 @@ import fcircle from '@/assets/svg/fcircle.png'
 import grid from '@/assets/svg/grid.png'
 import list from '@/assets/svg/list.png'
 import right from '@/assets/svg/right.png'
+import { ref, toRef } from 'vue'
 export default {
   data() {
     return {
@@ -79,7 +80,7 @@ export default {
   },
   provide() {
     return {
-      view: this.isGrid,
+      isGrid: toRef(this, 'isGrid'),
     }
   },
 }
