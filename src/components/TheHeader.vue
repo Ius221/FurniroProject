@@ -17,7 +17,7 @@
       </div>
       <div class="icons">
         <div class="ind-icon">
-          <img :src="user" alt="" />
+          <img :src="user" class="sml" alt="" />
         </div>
         <div class="ind-icon">
           <img :src="search" alt="" />
@@ -114,5 +114,10 @@ a:hover {
 .ind-icon img {
   height: 2.8rem;
   width: 2.8rem;
+}
+.sml {
+  height: 2.4rem !important;
+  width: 2.4rem !important;
+  margin-top: 0.4rem;
 }
 </style>

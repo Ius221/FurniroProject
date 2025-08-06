@@ -72,7 +72,7 @@
 import share from '@/assets/svg/Home/share.png'
 import compare from '@/assets/svg/Home/compare.png'
 import like from '@/assets/svg/header/like.png'
-import img from '@/assets/images/products/img--1.png'
+import img from '@/assets/images/products/img--1.jpg'
 export default {
   inject: ['isGrid'],
   data() {
@@ -118,7 +118,6 @@ export default {
     getImage(image) {
       let abc = this.img.slice(0, -10)
       abc = abc + image + '.jpg'
-      console.log(abc, image)
       return abc
     },
   },

@@ -6,6 +6,7 @@
 <script>
 import ProductBreadcrum from './sections/ProductBreadcrum.vue'
 import ProductInfo from './sections/ProductInfo.vue'
+
 export default {
   components: { ProductInfo, ProductBreadcrum },
   data() {
