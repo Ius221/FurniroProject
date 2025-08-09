@@ -8,7 +8,7 @@
       </div>
       <div class="img-content">
         <div class="main-img">
-          <div class="container">
+          <div class="container img-container">
             <transition name="slide" mode="out-in">
               <img :src="currentImage" :key="activeDot" alt="" class="main-image" />
             </transition>
@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="img2">
-          <div class="supporting">
+          <div class="supporting img-container">
             <transition name="slide" mode="out-in">
               <img :src="supportingImage.img" :key="activeDot + '-support1'" alt="" />
             </transition>
@@ -36,12 +36,12 @@
             ></div>
           </div>
         </div>
-        <div class="supporting">
+        <div class="supporting img-container">
           <transition name="slide" mode="out-in">
             <img :src="thirdImage.img" :key="activeDot + '-support2'" alt="" />
           </transition>
         </div>
-        <div class="supporting">
+        <div class="supporting img-container">
           <transition name="slide" mode="out-in">
             <img :src="fourthImage.img" :key="activeDot + '-support3'" alt="" />
           </transition>
@@ -127,7 +127,8 @@ export default {
   flex-direction: column;
   align-items: start;
   gap: 2rem;
-  width: 42rem !important;
+  /* width: 42rem !important; */
+  width: 42rem;
 }
 h2 {
   color: #3a3a3a;
@@ -279,5 +280,57 @@ h3 {
   width: 2.4rem;
   height: 2.4rem;
   margin-left: 3px;
+}
+</style>
+
+<style scoped>
+@media (max-width: 78em) {
+  .contents {
+    padding: 0 2rem;
+  }
+  .right-arrow {
+    right: 5%;
+  }
+}
+@media (max-width: 44em) {
+  .contents {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .img-content {
+    display: grid;
+    justify-self: center;
+    margin: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .right-arrow,
+  .dots {
+    display: none;
+  }
+  .img-container {
+    position: relative;
+    overflow: hidden;
+    width: 20rem;
+    height: 20rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+  .btn {
+    padding: 0.8rem 2.6rem;
+  }
+  .text-content {
+    width: auto;
+  }
+  img {
+    position: absolute;
+    width: 100%;
+  }
+  .box {
+    display: none;
+  }
 }
 </style>

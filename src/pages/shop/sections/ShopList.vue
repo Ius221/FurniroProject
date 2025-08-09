@@ -138,7 +138,6 @@ export default {
 .img-container {
   position: relative;
   height: 30rem;
-  width: 28.5rem;
   overflow: hidden;
 }
 .product-img {
@@ -304,5 +303,19 @@ a {
 }
 .page:hover {
   background-color: rgba(184, 143, 47, 0.5);
+}
+</style>
+
+<style scoped>
+@media (max-width: 78em) {
+  .product-lists {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 65em) {
+  .product-img {
+    width: 210%;
+  }
 }
 </style>

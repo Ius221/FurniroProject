@@ -4,7 +4,7 @@
     <div class="product-lists">
       <div
         class="indv-product"
-        v-for="(sofa, index) in sofas.slice(0, 8)"
+        v-for="(sofa, index) in displaySofas"
         :key="index"
         @mouseenter="isHover = index"
         @mouseleave="isHover = null"
@@ -70,13 +70,29 @@ export default {
       compare,
       isHover: null,
       sofas: null,
+      windowWidth: window.innerWidth,
     }
   },
   created() {
     this.sofas = this.$store.state.sofa.sofas
     console.log('Sofas loaded:', this.sofas)
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+  computed: {
+    displaySofas() {
+      if (!this.sofas) return []
+      // Show 9 items on mobile (max-width: 44em = 704px)
+      const maxItems = this.windowWidth <= 704 ? 9 : 8
+      return this.sofas.slice(0, maxItems)
+    },
   },
   methods: {
+    handleResize() {
+      this.windowWidth = window.innerWidth
+    },
     isDiscount(value) {
       if (value.includes('-')) return true
       return false
@@ -105,12 +121,11 @@ h2 {
 .img-container {
   position: relative;
   height: 30rem;
-  width: 28.5rem;
+  background-color: #f00;
   overflow: hidden;
 }
 .product-img {
   position: absolute;
-  /* width: 100%; */
   width: 180%;
   left: -5%;
   top: -5%;
@@ -253,5 +268,38 @@ a {
 }
 .discount {
   background-color: #e97171 !important;
+}
+</style>
+
+<style scoped>
+@media (max-width: 78em) {
+  .product-section {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 65em) {
+  .product-img {
+    width: 210%;
+  }
+  .price {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .desc {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 53em) {
+  .product-img[data-v-9db0466e] {
+    width: 220%;
+  }
+}
+@media (max-width: 44em) {
+  .product-lists {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 4rem;
+  }
 }
 </style>

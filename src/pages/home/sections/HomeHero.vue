@@ -91,8 +91,21 @@ a {
   transition: all 0.5s;
 }
 .btn:hover {
-  /* background-color: ; */
   box-shadow: 0 0 30px #b88e2f;
   border-radius: 1rem;
+}
+</style>
+
+<style scoped>
+@media (max-width: 78em) {
+  img {
+    top: 0%;
+  }
+  .box-container {
+    transform: translate(0%, -50%);
+  }
+  html {
+    font-size: 50%;
+  }
 }
 </style>

@@ -33,8 +33,8 @@
           <div class="link">Privacy Policies</div>
         </div>
       </div>
-      <div class="list">
-        <div class="fade mb">Newsletter</div>
+      <div class="list subscribe">
+        <div class="fade mb hide">Newsletter</div>
         <input type="email" name="email" placeholder="Enter Your Email Address" />
         <button>subscribe</button>
       </div>
@@ -111,9 +111,7 @@ a:hover,
 a:active {
   text-decoration: underline;
 }
-</style>
 
-<style scoped>
 .copyright {
   max-width: 124rem;
   margin: 0 auto;
@@ -122,5 +120,28 @@ a:active {
   font-size: 1.6rem;
   color: #333;
   text-align: center;
+}
+</style>
+
+<style scoped>
+@media (max-width: 78em) {
+  .outer-all {
+    padding: 0 2.4rem;
+  }
+}
+@media (max-width: 44em) {
+  .outer-div {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  .subscribe {
+    display: flex;
+    align-items: center;
+    grid-column: 1/-1;
+    justify-self: center;
+    margin-top: 4rem;
+  }
+  .hide {
+    display: none;
+  }
 }
 </style>

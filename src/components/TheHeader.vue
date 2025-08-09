@@ -32,7 +32,7 @@
     </nav>
   </div>
 </template>
-src\assets\svg\header\like.png
+
 <script>
 import logo from '@/assets/svg/header/logo.svg'
 import user from '@/assets/svg/header/user.png'
@@ -60,6 +60,11 @@ export default {
 </script>
 
 <style scoped>
+.name {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -119,5 +124,35 @@ a:hover {
   height: 2.4rem !important;
   width: 2.4rem !important;
   margin-top: 0.4rem;
+}
+</style>
+<style scoped>
+@media (max-width: 65em) {
+  a::after {
+    bottom: 30px;
+  }
+  nav {
+    padding-left: 3.4rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 53em) {
+  a::after {
+    bottom: 25px;
+  }
+  .link {
+    gap: 5.5rem;
+  }
+  .icons {
+    gap: 2.4rem;
+  }
+
+  .name span {
+    font-size: 3rem;
+  }
+  .name img {
+    width: 5.5rem;
+  }
 }
 </style>
