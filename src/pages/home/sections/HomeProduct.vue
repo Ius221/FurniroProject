@@ -303,6 +303,7 @@ a {
 @media (max-width: 44em) {
   .product-lists {
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.2rem;
   }
   .show-more {
     padding: 0.8rem 3.2rem;
@@ -316,6 +317,13 @@ a {
     width: 3.4rem;
     height: 3.4rem;
     font-size: 1.2rem;
+  }
+  .desc {
+    margin: 2px 0;
+    margin-bottom: 8px;
+  }
+  .price {
+    font-size: 1.4rem;
   }
 }
 </style>

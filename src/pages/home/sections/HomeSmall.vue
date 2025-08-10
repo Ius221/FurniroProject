@@ -64,7 +64,7 @@ img {
   position: absolute;
   top: 0%;
   right: 0%;
-  width: 255%;
+  width: 270%;
 }
 
 .img-text {
@@ -83,15 +83,20 @@ img {
 }
 @media (max-width: 65em) {
   .img-container {
-    height: 44rem;
+    height: 40rem;
   }
 }
 @media (max-width: 44em) {
   .img-section {
     flex-direction: column;
+    gap: 3rem;
+  }
+
+  .img-text {
+    margin-top: 1rem;
   }
   img {
-    top: -40%;
+    top: -15%;
     width: 110%;
   }
   .img-container {
@@ -103,12 +108,16 @@ img {
     height: 32rem;
   }
   img {
-    top: -35%;
+    top: -5%;
+    width: 115%;
   }
 }
 @media (max-width: 375px) {
   .img-container[data-v-a3b0fab5] {
     height: 27rem;
+  }
+  img {
+    width: 125%;
   }
 }
 </style>

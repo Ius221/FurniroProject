@@ -59,10 +59,4 @@ export default {
     font-size: 37.5%;
   }
 }
-
-@media (max-width: 480px) {
-  html {
-    font-size: 31.25%;
-  }
-}
 </style>

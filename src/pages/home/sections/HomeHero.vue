@@ -127,4 +127,17 @@ a {
     padding: 3.4rem 3rem;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 50vh;
+  }
+
+  .title {
+    font-size: 3.6rem;
+  }
+  .img-text {
+    margin-top: 1rem;
+  }
+}
 </style>
