@@ -32,15 +32,37 @@ export default {
     font-size: 56.25%;
   }
 }
+
+/*****************/
+/* Below 1040px */
+/***************/
 @media (max-width: 65em) {
   html {
     font-size: 50%;
   }
 }
 
+/****************/
+/* Below 848px */
+/*************/
 @media (max-width: 53em) {
   html {
     font-size: 43.75%;
+  }
+}
+
+/****************/
+/* Below 576px */
+/*************/
+@media (max-width: 36em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 31.25%;
   }
 }
 </style>

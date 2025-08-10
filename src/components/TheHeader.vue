@@ -155,4 +155,10 @@ a:hover {
     width: 5.5rem;
   }
 }
+
+@media (max-width: 44em) {
+  nav {
+    display: none;
+  }
+}
 </style>

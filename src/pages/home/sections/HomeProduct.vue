@@ -274,7 +274,7 @@ a {
 <style scoped>
 @media (max-width: 78em) {
   .product-section {
-    padding: 0 2rem;
+    padding: 0 2.4rem;
   }
 }
 @media (max-width: 65em) {
@@ -290,16 +290,32 @@ a {
   .desc {
     font-size: 1.4rem;
   }
+  .show-more {
+    padding: 1.2rem 5.4rem;
+  }
 }
 @media (max-width: 53em) {
   .product-img[data-v-9db0466e] {
     width: 220%;
   }
 }
+
 @media (max-width: 44em) {
   .product-lists {
     grid-template-columns: repeat(3, 1fr);
-    padding: 0 4rem;
+  }
+  .show-more {
+    padding: 0.8rem 3.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .img-container {
+    height: 24rem;
+  }
+  .tag {
+    width: 3.4rem;
+    height: 3.4rem;
+    font-size: 1.2rem;
   }
 }
 </style>

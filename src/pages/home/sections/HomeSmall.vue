@@ -78,7 +78,7 @@ img {
 <style scoped>
 @media (max-width: 78em) {
   .small-gallery {
-    padding: 0 2rem;
+    padding: 0 2.4rem;
   }
 }
 @media (max-width: 65em) {
@@ -96,6 +96,19 @@ img {
   }
   .img-container {
     height: 34rem;
+  }
+}
+@media (max-width: 480px) {
+  .img-container {
+    height: 32rem;
+  }
+  img {
+    top: -35%;
+  }
+}
+@media (max-width: 375px) {
+  .img-container[data-v-a3b0fab5] {
+    height: 27rem;
   }
 }
 </style>

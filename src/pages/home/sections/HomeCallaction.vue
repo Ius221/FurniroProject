@@ -286,13 +286,16 @@ h3 {
 <style scoped>
 @media (max-width: 78em) {
   .contents {
-    padding: 0 2rem;
+    padding: 0 2.4rem;
   }
   .right-arrow {
     right: 5%;
   }
 }
 @media (max-width: 44em) {
+  .outer-div {
+    height: 56rem;
+  }
   .contents {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
@@ -331,6 +334,40 @@ h3 {
   }
   .box {
     display: none;
+  }
+}
+
+@media (max-width: 36em) {
+  p {
+    max-width: 38rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-container[data-v-85cb7f55] {
+    width: 18rem;
+    height: 18rem;
+  }
+  .outer-div {
+    height: 46rem;
+  }
+}
+@media (max-width: 375px) {
+  h2 {
+    max-width: 22rem;
+    font-size: 2rem;
+  }
+  .btn,
+  p {
+    font-size: 1.2rem;
+  }
+  .btn {
+    padding: 0.8rem 1.8rem;
+  }
+
+  .img-container {
+    width: 14rem;
+    height: 14rem;
   }
 }
 </style>

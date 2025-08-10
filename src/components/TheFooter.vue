@@ -17,11 +17,12 @@
           <div class="link">
             <router-link to="/shop/page/1">Shop</router-link>
           </div>
-          <div class="link">
-            <router-link to="/about">About</router-link>
-          </div>
+
           <div class="link">
             <router-link to="/contact">Contact</router-link>
+          </div>
+          <div class="link">
+            <router-link to="/about" class="hide-me">About</router-link>
           </div>
         </div>
       </div>
@@ -141,6 +142,19 @@ a:active {
     margin-top: 4rem;
   }
   .hide {
+    display: none;
+  }
+
+  button,
+  input {
+    margin-top: 2rem;
+  }
+  .subscribe {
+    gap: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .hide-me {
     display: none;
   }
 }
