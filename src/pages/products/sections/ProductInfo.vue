@@ -91,9 +91,12 @@ import star from '@/assets/svg/products/star.png'
 import fb from '@/assets/svg/products/fb.png'
 import lin from '@/assets/svg/products/lin.png'
 import twit from '@/assets/svg/products/tweeter.png'
-import img from '@/assets/images/products/img--1.jpg'
 import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
+
+// Import all product images dynamically
+const productImages = import.meta.glob('@/assets/images/products/*.jpg', { eager: true })
+
 export default {
   name: 'App',
 
@@ -104,11 +107,6 @@ export default {
       fb,
       lin,
       twit,
-      img,
-      img1: null,
-      img2: null,
-      img3: null,
-      img4: null,
       ind: 0,
       cart: 1,
     }
@@ -127,11 +125,18 @@ export default {
       } else return ''
     },
     getImage(ind) {
-      let imag = this.img.slice(0, -10)
       const getImg = this.product.image[ind]
-      imag = imag + getImg + '.jpg'
-      // console.log(imag, getImg)
-      return imag
+      const imagePath = `/src/assets/images/products/${getImg}.jpg`
+      
+      // Find the image in the imported glob
+      for (const path in productImages) {
+        if (path.includes(getImg + '.jpg')) {
+          return productImages[path].default || productImages[path]
+        }
+      }
+      
+      // Fallback to a default image if not found
+      return '/src/assets/images/products/img--1a.jpg'
     },
     add() {
       if (this.cart < 10) {

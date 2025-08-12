@@ -72,12 +72,14 @@
 import share from '@/assets/svg/Home/share.png'
 import compare from '@/assets/svg/Home/compare.png'
 import like from '@/assets/svg/header/like.png'
-import img from '@/assets/images/products/img--1.jpg'
+
+// Import all product images dynamically
+const productImages = import.meta.glob('@/assets/images/products/*.jpg', { eager: true })
+
 export default {
   inject: ['isGrid'],
   data() {
     return {
-      img,
       like,
       share,
       compare,
@@ -116,9 +118,17 @@ export default {
       return this.currPage
     },
     getImage(image) {
-      let abc = this.img.slice(0, -10)
-      abc = abc + image + '.jpg'
-      return abc
+      // Find the image in the imported glob
+      for (const path in productImages) {
+        if (path.includes(image + '.jpg')) {
+          return productImages[path].default || productImages[path]
+        }
+      }
+
+      // Fallback to a default image if not found
+      return '/src/assets/images/products/img--1a.jpg'
+
+      // return productImages[imageName] || 'src/assets/images/products/img--1a.jpg'
     },
   },
   computed: {

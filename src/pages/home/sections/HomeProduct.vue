@@ -60,11 +60,13 @@
 import share from '@/assets/svg/Home/share.png'
 import compare from '@/assets/svg/Home/compare.png'
 import like from '@/assets/svg/header/like.png'
-import img from '@/assets/images/products/img--1.jpg'
+
+// Import all product images dynamically
+const productImages = import.meta.glob('@/assets/images/products/*.jpg', { eager: true })
+
 export default {
   data() {
     return {
-      img,
       like,
       share,
       compare,
@@ -98,10 +100,15 @@ export default {
       return false
     },
     prodImage(image) {
-      let currImg = img.slice(0, -10)
-      currImg = currImg + image + '.jpg'
-      return currImg
-      // console.log(currImg, image)
+      // Find the image in the imported glob
+      for (const path in productImages) {
+        if (path.includes(image + '.jpg')) {
+          return productImages[path].default || productImages[path]
+        }
+      }
+
+      // Fallback to a default image if not found
+      return '/src/assets/images/products/img--1a.jpg'
     },
   },
 }
