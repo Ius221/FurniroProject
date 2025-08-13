@@ -55,12 +55,12 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
 }
 .img-container {
-  height: 18rem;
-  width: 36rem;
+  height: 24rem;
+  width: 48rem;
   overflow: hidden;
   position: relative;
   border-radius: 1rem;
-  background-color: #f00;
+  /* background-color: #f00; */
 }
 img {
   position: absolute;
@@ -77,13 +77,11 @@ img {
 </style>
 
 <style scoped>
-@media (min-width: 320px) {
+@media (min-width: 375px) {
   .img-container {
-    width: 48rem;
-    height: 24rem;
+    width: 57rem;
   }
 }
-
 @media (min-width: 480px) {
   .img-section {
     flex-direction: row;
@@ -118,9 +116,7 @@ img {
     width: 40rem;
     height: 58rem;
   }
-  .img-section {
-    gap: 2rem;
-  }
+
   .desc {
     width: 36rem;
   }

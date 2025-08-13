@@ -37,17 +37,16 @@
           <p class="desc">{{ sofa.description.split(' ').slice(0, 3).join(' ') }}...</p>
           <div class="price">
             <div v-if="sofa.tags && isDiscount(sofa.tags)" class="disc-price">
-              <p>
-                ₹
-                {{
-                  (sofa.price - sofa.price * (Number(sofa.tags.slice(1, 3)) / 100)).toLocaleString(
-                    'en-IN',
-                  )
-                }}
-              </p>
-              <p class="actual-price">₹ {{ sofa.price.toLocaleString('en-IN') }}</p>
+              ₹
+              {{
+                (sofa.price - sofa.price * (Number(sofa.tags.slice(1, 3)) / 100)).toLocaleString(
+                  'en-IN',
+                )
+              }}
             </div>
-            <div v-else>₹ {{ sofa.price.toLocaleString('en-IN') }}</div>
+            <div :class="sofa.tags && isDiscount(sofa.tags) ? 'actual-price' : ''">
+              ₹ {{ sofa.price.toLocaleString('en-IN') }}
+            </div>
           </div>
         </div>
       </div>
@@ -87,7 +86,7 @@ export default {
     displaySofas() {
       if (!this.sofas) return []
       // Show 9 items on mobile (max-width: 44em = 704px)
-      const maxItems = this.windowWidth <= 704 ? 9 : 8
+      const maxItems = this.windowWidth >= 480 && this.windowWidth <= 768 ? 9 : 8
       return this.sofas.slice(0, maxItems)
     },
   },
@@ -128,19 +127,23 @@ h2 {
 .img-container {
   position: relative;
   height: 30rem;
+  width: 100%;
   background-color: #f00;
   overflow: hidden;
 }
 .product-img {
   position: absolute;
+  height: 100%;
   width: 180%;
   left: -5%;
-  top: -5%;
+  top: 0%;
 }
 .others {
   text-align: start;
   background-color: #f4f5f7;
   padding: 1.6rem;
+  width: 100%;
+  height: 14.5rem;
 }
 .price,
 h3 {
@@ -151,9 +154,11 @@ h3 {
 .desc {
   font-size: 1.6rem;
   color: #898989;
-  margin: 8px 0;
+  margin: 4px 0;
 }
 .price {
+  display: flex;
+  justify-content: space-between;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -164,6 +169,7 @@ h3 {
 }
 .actual-price {
   text-decoration: line-through;
+  padding-right: 2rem;
   font-style: italic;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.3);
@@ -171,11 +177,16 @@ h3 {
 }
 .product-lists {
   display: grid;
-  gap: 3.2rem;
+  /* gap: 3.2rem; */
+  gap: 1rem;
   margin-top: 3.2rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  justify-self: center;
 }
 .indv-product {
+  height: 44.6rem;
+  /* width: 28.5rem; */
+  width: 24rem;
   cursor: pointer;
   transition: all 0.3s;
   position: relative;
@@ -278,59 +289,71 @@ a {
 }
 </style>
 
+<!-- 28.5rem -->
 <style scoped>
-@media (max-width: 78em) {
-  .product-section {
-    padding: 0 2.4rem;
+@media (min-width: 375px) {
+  .indv-product {
+    width: 28rem;
   }
 }
-@media (max-width: 65em) {
-  .product-img {
-    width: 210%;
+@media (min-width: 480px) {
+  .product-lists {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .indv-product {
+    width: 22rem;
+  }
+  h3 {
+    font-size: 2.2rem;
   }
   .price {
     font-size: 1.6rem;
   }
-  h3 {
-    font-size: 2rem;
-  }
   .desc {
     font-size: 1.4rem;
-  }
-  .show-more {
-    padding: 1.2rem 5.4rem;
-  }
-}
-@media (max-width: 53em) {
-  .product-img[data-v-9db0466e] {
-    width: 220%;
   }
 }
 
-@media (max-width: 44em) {
-  .product-lists {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1.2rem;
-  }
-  .show-more {
-    padding: 0.8rem 3.2rem;
-  }
-}
-@media (max-width: 480px) {
-  .img-container {
-    height: 24rem;
-  }
-  .tag {
-    width: 3.4rem;
-    height: 3.4rem;
-    font-size: 1.2rem;
+@media (min-width: 600px) {
+  .indv-product {
+    width: 26rem;
   }
   .desc {
-    margin: 2px 0;
-    margin-bottom: 8px;
+    margin: 6px 0;
+  }
+}
+@media (min-width: 768px) {
+  .product-lists {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+  .indv-product {
+    width: 22.8rem;
+  }
+  .desc {
+    margin: 8px 0;
+    font-size: 1.4rem;
   }
   .price {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .product-lists {
+    gap: 3.2rem;
+  }
+  .indv-product {
+    width: 28.5rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+  .desc {
+    font-size: 1.6rem;
+  }
+  .price {
+    font-size: 2rem;
   }
 }
 </style>
