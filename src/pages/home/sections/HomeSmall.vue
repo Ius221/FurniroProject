@@ -35,9 +35,7 @@ export default {
   margin: 0 auto;
   text-align: center;
 }
-.section {
-  width: 100%;
-}
+
 h2 {
   font-size: 3.2rem;
   font-weight: 700;
@@ -45,16 +43,20 @@ h2 {
 .desc {
   color: #666;
   font-size: 2rem;
+  width: 28rem;
   margin: 1.8rem auto 6rem auto;
 }
 .img-section {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(3, 1fr);
 }
 .img-container {
-  height: 48rem;
+  height: 18rem;
+  width: 36rem;
   overflow: hidden;
   position: relative;
   border-radius: 1rem;
@@ -64,60 +66,72 @@ img {
   position: absolute;
   top: 0%;
   right: 0%;
-  width: 270%;
+  width: 100%;
 }
 
 .img-text {
-  margin-top: 3rem;
+  margin-top: 1.2rem;
   font-size: 2.4rem;
   font-weight: 600;
 }
 </style>
 
-<!-- MEDIA QUERIES -->
 <style scoped>
-@media (max-width: 78em) {
-  .small-gallery {
-    padding: 0 2.4rem;
-  }
-}
-@media (max-width: 65em) {
+@media (min-width: 320px) {
   .img-container {
-    height: 40rem;
+    width: 48rem;
+    height: 24rem;
   }
 }
-@media (max-width: 44em) {
-  .img-section {
-    flex-direction: column;
-    gap: 3rem;
-  }
 
-  .img-text {
-    margin-top: 1rem;
-  }
-  img {
-    top: -15%;
-    width: 110%;
+@media (min-width: 480px) {
+  .img-section {
+    flex-direction: row;
   }
   .img-container {
-    height: 34rem;
-  }
-}
-@media (max-width: 480px) {
-  .img-container {
+    width: 22rem;
     height: 32rem;
   }
   img {
-    top: -5%;
-    width: 115%;
+    width: 300%;
   }
 }
-@media (max-width: 375px) {
-  .img-container[data-v-a3b0fab5] {
-    height: 27rem;
+@media (min-width: 600px) {
+  .img-container {
+    width: 26rem;
+    height: 38rem;
   }
-  img {
-    width: 125%;
+  .desc {
+    width: 28rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .img-container {
+    width: 32rem;
+    height: 48rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .img-container {
+    width: 40rem;
+    height: 58rem;
+  }
+  .img-section {
+    gap: 2rem;
+  }
+  .desc {
+    width: 36rem;
+  }
+}
+@media (min-width: 1246px) {
+  .img-container {
+    width: 39.8rem;
+    height: 48rem;
+  }
+  .desc {
+    width: 44rem;
   }
 }
 </style>

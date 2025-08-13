@@ -341,12 +341,14 @@ h3 {
   p {
     max-width: 38rem;
   }
+  .img-content {
+    gap: 1.4rem;
+  }
 }
-
 @media (max-width: 480px) {
-  .img-container[data-v-85cb7f55] {
-    width: 18rem;
-    height: 18rem;
+  .img-container {
+    width: 16rem;
+    height: 16rem;
   }
   .outer-div {
     height: 46rem;
@@ -366,8 +368,8 @@ h3 {
   }
 
   .img-container {
-    width: 14rem;
-    height: 14rem;
+    width: 12rem;
+    height: 12rem;
   }
 }
 </style>
