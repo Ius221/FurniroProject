@@ -76,7 +76,6 @@ export default {
   },
   created() {
     this.sofas = this.$store.state.sofa.sofas
-    console.log('Sofas loaded:', this.sofas)
     window.addEventListener('resize', this.handleResize)
   },
   beforeUnmount() {

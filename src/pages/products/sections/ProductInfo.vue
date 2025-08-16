@@ -51,7 +51,7 @@
             <div class="neg">{{ cart }}</div>
             <button class="neg" @click="add">+</button>
           </div>
-          <div class="cart-btn btn">Add To Cart</div>
+          <div class="cart-btn btn" @click="cartAdding">Add To Cart</div>
           <div class="compare-btn btn">+ Compare</div>
         </div>
       </div>
@@ -93,6 +93,7 @@ import lin from '@/assets/svg/products/lin.png'
 import twit from '@/assets/svg/products/tweeter.png'
 import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
+import { mapMutations } from 'vuex'
 
 // Import all product images dynamically
 const productImages = import.meta.glob('@/assets/images/products/*.jpg', { eager: true })
@@ -111,7 +112,29 @@ export default {
       cart: 1,
     }
   },
+  created() {
+    this.getCart()
+  },
+  computed: {
+    ...mapMutations(['addToCart']),
+  },
   methods: {
+    getCart() {
+      const allItems = this.$store.state.cart.cartProd
+      console.log('Cart Items: ', allItems)
+    },
+    cartAdding() {
+      // Add item to cart using Vuex store mutation
+      this.$store.commit('addToCart', {
+        id: this.product.id.toString(),
+        quantity: this.cart.toString(),
+      })
+
+      // Show success notification
+      this.notify(`Added ${this.cart} item(s) to cart!`)
+
+      this.getCart();
+    },
     checkDisc() {
       if (this.product.tags) return this.product.tags.includes('-')
       return ''
@@ -127,14 +150,14 @@ export default {
     getImage(ind) {
       const getImg = this.product.image[ind]
       const imagePath = `/src/assets/images/products/${getImg}.jpg`
-      
+
       // Find the image in the imported glob
       for (const path in productImages) {
         if (path.includes(getImg + '.jpg')) {
           return productImages[path].default || productImages[path]
         }
       }
-      
+
       // Fallback to a default image if not found
       return '/src/assets/images/products/img--1a.jpg'
     },

@@ -11,9 +11,6 @@ import CarouselSection from './sections/ShopCarousel.vue'
 export default {
   inject: ['isGrid'],
   components: { ShopBreadcrums, ShopList, CarouselSection },
-  created() {
-    console.log(this.isGrid)
-  },
 }
 </script>
 
