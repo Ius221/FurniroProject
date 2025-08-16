@@ -1,5 +1,6 @@
 
 export default {
+  namespaced: true,
   state() {
     return {
       cartProd: [
@@ -36,5 +37,4 @@ export default {
     }
   },
   actions: {}
-
 }

@@ -16,18 +16,26 @@
         </div>
       </div>
       <div class="icons">
-        <div class="ind-icon">
-          <img :src="user" class="sml" alt="" />
-        </div>
-        <div class="ind-icon">
-          <img :src="search" alt="" />
-        </div>
-        <div class="ind-icon">
-          <img :src="like" alt="" />
-        </div>
-        <div class="ind-icon">
-          <img :src="cart" alt="" />
-        </div>
+        <router-link to="">
+          <div class="ind-icon">
+            <img :src="user" class="sml" alt="" />
+          </div>
+        </router-link>
+        <router-link to="">
+          <div class="ind-icon">
+            <img :src="search" alt="" />
+          </div>
+        </router-link>
+        <router-link to="">
+          <div class="ind-icon">
+            <img :src="like" alt="" />
+          </div>
+        </router-link>
+        <router-link to="/cart">
+          <div class="ind-icon">
+            <img :src="cart" alt="" />
+          </div>
+        </router-link>
       </div>
     </nav>
   </div>

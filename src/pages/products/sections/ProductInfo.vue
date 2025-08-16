@@ -116,7 +116,7 @@ export default {
     this.getCart()
   },
   computed: {
-    ...mapMutations(['addToCart']),
+    ...mapMutations('carts', ['addToCart']),
   },
   methods: {
     getCart() {
@@ -125,7 +125,7 @@ export default {
     },
     cartAdding() {
       // Add item to cart using Vuex store mutation
-      this.$store.commit('addToCart', {
+      this.$store.commit('cart/addToCart', {
         id: this.product.id.toString(),
         quantity: this.cart.toString(),
       })
@@ -133,7 +133,7 @@ export default {
       // Show success notification
       this.notify(`Added ${this.cart} item(s) to cart!`)
 
-      this.getCart();
+      this.getCart()
     },
     checkDisc() {
       if (this.product.tags) return this.product.tags.includes('-')
