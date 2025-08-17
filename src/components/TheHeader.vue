@@ -7,10 +7,19 @@
       </div>
       <div class="links">
         <div class="link">
-          <router-link to="/" :class="{ active: route.path === '/' }">Home</router-link>
-          <router-link to="/shop/page/1" :class="{ active: isActive('/shop') }">Shop</router-link>
-          <router-link to="/about" :class="{ active: route.path === '/about' }">About</router-link>
-          <router-link to="/contact" :class="{ active: route.path === '/contact' }"
+          <router-link to="/" class="point-link" :class="{ active: route.path === '/' }"
+            >Home</router-link
+          >
+          <router-link to="/shop/page/1" class="point-link" :class="{ active: isActive('/shop') }"
+            >Shop</router-link
+          >
+          <router-link to="/about" class="point-link" :class="{ active: route.path === '/about' }"
+            >About</router-link
+          >
+          <router-link
+            to="/contact"
+            class="point-link"
+            :class="{ active: route.path === '/contact' }"
             >Contact</router-link
           >
         </div>
@@ -92,7 +101,7 @@ nav {
   display: flex;
   gap: 4.5rem;
 }
-a {
+.point-link {
   color: inherit;
   text-decoration: none;
   font-size: 1.6rem;
@@ -103,7 +112,7 @@ a {
   position: relative;
 }
 
-a::after {
+.point-link::after {
   content: '';
   position: absolute;
   left: 0;
@@ -113,13 +122,13 @@ a::after {
   transition: all 0.3s ease;
   background-color: #b88e2f;
 }
-a.active::after,
-a:hover::after {
+.point-link.active::after,
+.point-link:hover::after {
   width: 100%;
 }
 
 .active,
-a:hover {
+.point-link:hover {
   transform: scale(1.1);
   color: #b88e2f;
 }
@@ -136,7 +145,7 @@ a:hover {
 </style>
 <style scoped>
 @media (max-width: 65em) {
-  a::after {
+  .point-link::after {
     bottom: 30px;
   }
   nav {
@@ -146,7 +155,7 @@ a:hover {
 }
 
 @media (max-width: 53em) {
-  a::after {
+  .point-link::after {
     bottom: 25px;
   }
   .link {

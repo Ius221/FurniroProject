@@ -4,13 +4,15 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/router'
 import store from './store/index.js'
-// import Vue3Toastify from 'vue3-toastify'
-// import 'vue3-toastify/dist/index.css'
+import TopBreadcrum from './components/UI/TopBreadcrum.vue'
+import PageCarousel from './components/UI/PageCarousel.vue'
 
 const app = createApp(App)
 
 app.use(router)
 app.use(store)
-// app.use(toast, { autoClose: 3000 })
+
+app.component('top-breadcrum', TopBreadcrum)
+app.component('page-carousel', PageCarousel)
 
 app.mount('#app')

@@ -6,8 +6,9 @@
     <p>{{ ele.title }}</p>
     <p>{{ ele.price }}</p>
     <p>{{ ele.qty }}</p>
+    <p>{{ ele.qtyPrice }}</p>
   </div>
-  <h3>Total product {{ totalProd }}</h3>
+  <h3>Total Cart Price {{ totalPrice }}</h3>
 </template>
 
 <script>
@@ -17,6 +18,7 @@ export default {
     return {
       totalProd: 0,
       currProd: [],
+      totalPrice: 0,
     }
   },
   computed: {
@@ -32,15 +34,17 @@ export default {
       this.currProd = []
       for (const ele of this.getCart) {
         let found = this.sofas.find((abc) => abc.id === ele.id)
-
+        let indvPrice = 0
         if (found) {
-          console.log(found, ele)
           found = {
             ...found,
             qty: ele.quantity,
+            qtyPrice: ele.quantity * found.price,
           }
+          indvPrice = found.price * found.qty
           this.currProd.push(found)
         }
+        this.totalPrice += indvPrice
       }
 
       console.log(this.currProd)

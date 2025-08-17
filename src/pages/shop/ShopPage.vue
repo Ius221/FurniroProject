@@ -1,16 +1,19 @@
 <template>
+  <top-breadcrum>
+    <template #headCurr> Shop </template>
+    <template #curr> Shop </template>
+  </top-breadcrum>
   <shop-breadcrums />
   <shop-list class="list" />
-  <carousel-section />
+  <page-carousel />
 </template>
 
 <script>
-import ShopBreadcrums from './sections/ShopBreadcrums.vue'
+import ShopBreadcrums from './sections/ShopSupportbar.vue'
 import ShopList from './sections/ShopList.vue'
-import CarouselSection from './sections/ShopCarousel.vue'
 export default {
   inject: ['isGrid'],
-  components: { ShopBreadcrums, ShopList, CarouselSection },
+  components: { ShopBreadcrums, ShopList },
 }
 </script>
 
